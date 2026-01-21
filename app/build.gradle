@@ -5,7 +5,8 @@ plugins {
 android {
     namespace 'com.example.footballlive'
     // ลด SDK ลงมาเพื่อให้เครื่องมือทั่วไปรู้จัก
-    compileSdk 36
+    //noinspection GradleDependency
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.footballlive"
@@ -22,7 +23,7 @@ android {
 
     // แนะนำให้ Comment ส่วนนี้ไว้ก่อนถ้าเปิดบน PC เพราะ Path ไฟล์เป็นของมือถือ
     /*
-    signingConfigs {
+   //signingConfigs {
         release {
             storeFile file("/storage/emulated/0/AndroidIDEProjects/release.keystore")
             storePassword "opo123s"
