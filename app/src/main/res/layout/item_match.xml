@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:layout_marginEnd="12dp"
+     android:clickable="true"
+     app:cardElevation="6dp"
+     app:cardBackgroundColor="#1E1E1E"
+     android:layout_marginTop="6dp"
+     android:layout_marginStart="12dp"
+     android:focusable="true"
+     android:foreground="?android:attr/selectableItemBackground"
+     android:layout_marginBottom="6dp"
+     app:cardCornerRadius="16dp"
+     android:id="@+id/cardView">
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:padding="16dp"
+         android:orientation="vertical">
+
+        <RelativeLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:layout_toStartOf="@+id/rightInfoLayout"
+                 android:gravity="center_vertical"
+                 android:layout_centerVertical="true"
+                 android:orientation="horizontal"
+                 android:layout_alignParentStart="true"
+                 android:id="@+id/leagueLayout">
+
+                <ImageView
+                     android:layout_height="28dp"
+                     android:layout_width="28dp"
+                     android:scaleType="centerCrop"
+                     android:id="@+id/leagueImage" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:ellipsize="end"
+                     android:textSize="13sp"
+                     android:textColor="#B0B0B0"
+                     android:layout_marginStart="10dp"
+                     android:maxLines="1"
+                     android:id="@+id/leagueName"
+                     android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:gravity="center_vertical"
+                 android:layout_centerVertical="true"
+                 android:orientation="horizontal"
+                 android:layout_alignParentEnd="true"
+                 android:id="@+id/rightInfoLayout">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:visibility="gone"
+                     android:textSize="12sp"
+                     android:textColor="#FFFFFF"
+                     android:paddingStart="12dp"
+                     android:paddingEnd="12dp"
+                     android:background="@drawable/live_indicator_bg"
+                     android:paddingBottom="5dp"
+                     android:id="@+id/liveIndicator"
+                     android:paddingTop="5dp"
+                     android:text="● สด"
+                     android:textStyle="bold" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:paddingEnd="14dp"
+                     android:background="@drawable/time_bg"
+                     android:paddingBottom="6dp"
+                     android:textSize="13sp"
+                     android:textColor="#4CAF50"
+                     android:paddingStart="14dp"
+                     android:layout_marginStart="8dp"
+                     android:id="@+id/matchTime"
+                     android:paddingTop="6dp"
+                     android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:gravity="center_vertical"
+             android:orientation="horizontal">
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:gravity="center"
+                 android:orientation="vertical"
+                 android:layout_weight="1">
+
+                <ImageView
+                     android:layout_height="50dp"
+                     android:layout_width="50dp"
+                     android:scaleType="centerCrop"
+                     android:id="@+id/homeTeamImage" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:gravity="center"
+                     android:ellipsize="end"
+                     android:textSize="14sp"
+                     android:textColor="#FFFFFF"
+                     android:layout_marginTop="10dp"
+                     android:maxLines="2"
+                     android:id="@+id/homeTeamName"
+                     android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:layout_marginEnd="16dp"
+                 android:gravity="center"
+                 android:orientation="vertical"
+                 android:layout_marginStart="16dp">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:visibility="gone"
+                     android:paddingEnd="18dp"
+                     android:background="@drawable/time_bg"
+                     android:paddingBottom="8dp"
+                     android:textSize="18sp"
+                     android:textColor="#FFD700"
+                     android:paddingStart="18dp"
+                     android:id="@+id/scoreText"
+                     android:paddingTop="8dp"
+                     android:textStyle="bold" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textSize="18sp"
+                     android:textColor="#FF5252"
+                     android:id="@+id/vsText"
+                     android:text="VS"
+                     android:textStyle="bold" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:visibility="gone"
+                     android:textSize="11sp"
+                     android:textColor="#FFB74D"
+                     android:layout_marginTop="6dp"
+                     android:id="@+id/matchStatus" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:gravity="center"
+                 android:orientation="vertical"
+                 android:layout_weight="1">
+
+                <ImageView
+                     android:layout_height="50dp"
+                     android:layout_width="50dp"
+                     android:scaleType="centerCrop"
+                     android:id="@+id/awayTeamImage" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:gravity="center"
+                     android:ellipsize="end"
+                     android:textSize="14sp"
+                     android:textColor="#FFFFFF"
+                     android:layout_marginTop="10dp"
+                     android:maxLines="2"
+                     android:id="@+id/awayTeamName"
+                     android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:visibility="gone"
+             android:gravity="center"
+             android:orientation="horizontal"
+             android:layout_marginTop="12dp"
+             android:id="@+id/footerLayout">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:textSize="11sp"
+                 android:textColor="#90A4AE"
+                 android:id="@+id/additionalInfo" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

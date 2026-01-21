@@ -1,0 +1,20 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/ดูบอล/app/build.gradle",
+      "selection": {
+        "end": {
+          "column": 17,
+          "index": 114,
+          "line": 6
+        },
+        "start": {
+          "column": 17,
+          "index": 114,
+          "line": 6
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/ดูบอล/app/build.gradle"
+}

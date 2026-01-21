@@ -1,0 +1,75 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.footballlive'
+    // ลด SDK ลงมาเพื่อให้เครื่องมือทั่วไปรู้จัก
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.example.footballlive"
+        minSdk 24
+        //noinspection OldTargetApi
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    // แนะนำให้ Comment ส่วนนี้ไว้ก่อนถ้าเปิดบน PC เพราะ Path ไฟล์เป็นของมือถือ
+    /*
+    signingConfigs {
+        release {
+            storeFile file("/storage/emulated/0/AndroidIDEProjects/release.keystore")
+            storePassword "opo123s"
+            keyAlias "fsaehfhc"
+            keyPassword "opo123s"
+        }
+    }
+    */
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            // ปิดการเรียกใช้ signingConfig ไปก่อนเพื่อให้รันผ่าน
+            // signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            // signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation("androidx.constraintlayout:constraintlayout:2.2.1") // ปรับเวอร์ชันให้เสถียรขึ้น
+    implementation("com.google.android.material:material:1.13.0")    // ใช้ตัว Stable
+    implementation("androidx.appcompat:appcompat:1.7.1")
+    implementation("androidx.recyclerview:recyclerview:1.4.0")
+    implementation("androidx.cardview:cardview:1.0.0")
+
+    // โค้ดสำหรับทำแอปดูบอล/IPTV (ExoPlayer)
+    implementation("com.google.android.exoplayer:exoplayer:2.19.1")
+    implementation("com.google.android.exoplayer:exoplayer-hls:2.19.1")
+    implementation("com.google.android.exoplayer:exoplayer-ui:2.19.1")
+
+    implementation("com.github.bumptech.glide:glide:5.0.5")
+    annotationProcessor("com.github.bumptech.glide:compiler:5.0.5")
+}
